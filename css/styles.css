@@ -1,8 +1,13 @@
 @charset "utf-8";
 /* CSS Document */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
 
 body,td,th,p{
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 	color: #333;
 	line-height: 1.5;
@@ -10,7 +15,8 @@ body,td,th,p{
 body {
 	background-color: #fdfdfd;
 	margin: 0;
-	position:relative;
+  position:relative;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
@@ -105,8 +111,10 @@ nav h1 a {
 }
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
+  display: flex;
+  align-items: center;
   width: 100%;
-  height: 50px;
+  height: auto;
   background-color: #3397DB;
   align-items: center;
 }
@@ -131,11 +139,16 @@ nav h1 a {
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
+  min-height: auto;
 }
 #restaurants-list li {
   background-color: #fff;
@@ -204,7 +217,6 @@ nav h1 a {
 }
 .inside #footer {
   bottom: 0;
-  position: absolute;
   width: 50%;
 }
 #restaurant-name {
